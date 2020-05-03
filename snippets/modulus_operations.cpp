@@ -68,6 +68,13 @@ long long modInverse(long long b, long long m)
     return (x%m + m) % m;
 }
 
+long long modInverseModPrime(long long b, long long m)
+{
+    // Fermat little Theorem https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/
+    return modexpo(b, m - 2, m);
+}
+
+
 int main(){
     return 0;
 }
